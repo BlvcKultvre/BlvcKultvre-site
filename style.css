@@ -7,8 +7,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #f5f5f5;
-  line-height: 1.6;
+  color: #f5f5f1;
+  line-height: 1.1;
 
   /* Responsive background */
   background-image: url('Background.jpg'); /* updated background */
