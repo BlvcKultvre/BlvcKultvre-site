@@ -118,3 +118,36 @@ footer {
   .hero h2 { font-size:2.2rem; }
   section { padding:2.5rem 1rem; }
 }
+
+/* Make the main About intro + stats match the job card style */
+#about > p:first-of-type,
+.stats {
+  background: rgba(40,30,80,0.3);
+  padding: 1.3rem;
+  border-radius: 12px;
+  border-left: 4px solid #d4a373;
+  backdrop-filter: blur(5px);
+}
+
+/* Intro paragraph specific */
+#about > p:first-of-type {
+  margin-bottom: 1.5rem;
+  color: #ddd;
+  font-size: 1.05rem;
+}
+
+/* Stats inside the card */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.stats div {
+  text-align: center;
+  background: transparent !important; /* keeps inside stats clean */
+  padding: 0;
+  border: none !important;
+}
