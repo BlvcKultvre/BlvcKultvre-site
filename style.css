@@ -8,7 +8,7 @@ body {
   background: #0f0a1f;
   color: #e0d9ff;
   line-height: 1.7;
-  padding-top: 70px; /* space for fixed navbar */
+  padding-top: 10px; /* space for fixed navbar */
 }
 
 nav {
