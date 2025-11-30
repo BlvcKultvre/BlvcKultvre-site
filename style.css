@@ -12,7 +12,7 @@ body {
   color: #e0d9ff;
   background: linear-gradient(135deg, #0d0a1f 0%, #1a1033 50%, #160d2e 100%);
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 50vh;
   line-height: 1.7;
 }
 
@@ -41,7 +41,7 @@ nav {
   backdrop-filter: blur(12px);
   padding: 1.2rem 2rem;
   position: fixed;
-  width: 50%;
+  width: 150%;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid rgba(140, 100, 255, 0.3);
