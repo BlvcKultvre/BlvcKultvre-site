@@ -61,7 +61,7 @@ nav ul a:hover { color:#d4a373; }
 section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding-top: 2rem 1.5rem;
 }
 
 section h2 {
