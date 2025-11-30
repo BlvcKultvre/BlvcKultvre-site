@@ -8,7 +8,7 @@ body {
   background: #0f0a1f;
   color: #e0d9ff;
   line-height: 1.7;
-  padding-top: 40px; /* space for fixed navbar */
+  padding-top: 70px; /* space for fixed navbar */
 }
 
 nav {
@@ -61,7 +61,7 @@ nav ul a:hover { color:#d4a373; }
 section {
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 2rem 1.5rem;
+  padding-top: 3rem 1.5rem;
 }
 
 section h2 {
