@@ -1,92 +1,216 @@
-body {
-  font-family: Arial, sans-serif;
+/* ====== Global Styles ====== */
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  color: #eee;                  /* Fixed: was "Pink" */
+  line-height: 1.7;
+  background-image: url('Background.jpg');
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* ====== Profile Image ====== */
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #d4a373;
+  display: block;
+  margin: 50px auto;
+}
+
+/* ====== Navbar ====== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #222;
 }
 
 nav h1 {
-  margin: 0;
+  font-size: 1.4rem;
+  color: #d4a373;
+  letter-spacing: 1px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-nav a {
-  color: #fff;
+nav ul li a {
+  color: #eee;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
+nav ul li a:hover {
+  color: #d4a373;
+}
+
+/* ====== Hero Section ====== */
 .hero {
+  background: linear-gradient(to bottom right, rgba(26,26,26,0.8), rgba(13,13,13,0.8));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 4rem 2rem;
-  background: #eee;
-}
-
-.profile {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-section {
   padding: 2rem;
-  max-width: 1200px;
+}
+
+.hero .intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .intro h2 span {
+  color: #d4a373;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.hero .tagline {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #b6895b;
+}
+
+/* ====== Section Headers ====== */
+section {
+  padding: 100px 20px 60px;
+  max-width: 900px;
   margin: 0 auto;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  border-left: 4px solid #d4a373;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+/* ====== About Section ====== */
+#about p {
+  color: #ddd;
+  margin-bottom: 1.2rem;
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
-  margin-top: 1rem;
-}
-
-.job, .service {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-footer {
+.stats div {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: #fff;
+  flex: 1 1 200px;
+  box-shadow: 0 0 10px rgba(212, 163, 115, 0.2);
+  transition: transform 0.3s ease;
 }
 
-/* Mobile responsiveness */
+.stats div:hover {
+  transform: translateY(-5px);
+}
+
+.stats strong {
+  font-size: 1.6rem;
+  color: #d4a373;
+}
+
+/* ====== Resume Section ====== */
+.job {
+  background: #141414;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #d4a373;
+}
+
+.job h3 {
+  color: #d4a373;
+}
+
+/* ====== Services ====== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.service {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+.service h3 {
+  color: #d4a373;
+  margin-bottom: 10px;
+}
+
+/* ====== Contact ====== */
+#contact a {
+  color: #d4a373;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    display: none; /* You can replace with a hamburger menu later if you want */
   }
-  .stats {
-    flex-direction: column;
+
+  nav h1 {
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 80px 15px;
+  }
+
+  .hero .intro h2 {
+    font-size: 2rem;
   }
 }
