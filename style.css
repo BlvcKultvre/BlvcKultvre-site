@@ -67,41 +67,52 @@ nav ul li a:hover {
 }
 
 /* ====== Hero Section ====== */
+/* ====== HERO SECTION – FIXED SPACING ====== */
 .hero {
-  min-height: 100vh;
+  min-height: 100vh;           /* keep full height on desktop */
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
 }
 
+/* This is the main fix – controls the actual content box size */
+.hero .intro {
+  max-width: 800px;
+  padding: 2rem 1rem;         /* reduced from huge empty space */
+}
+
+/* Tighten up the text spacing */
 .hero .intro h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 4.5rem;
-  font-weight: 900;
-  background: linear-gradient(90deg, #d4a373, #f0d49c, #c49aff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 30px rgba(180, 120, 255, 0.4);
+  font-size: 3.8rem;           /* slightly smaller on large screens */
+  margin-bottom: 0.8rem;
+  line-height: 1.1;
 }
 
 .hero p {
-  font-size: 1.4rem;
-  color: #b8a0ff;
-  margin: 0.8rem 0;
+  font-size: 1.3rem;
+  margin: 0.6rem 0;
 }
 
 .hero .tagline {
-  font-size: 1.2rem;
-  color: #9d80ff;
-  font-style: normal;
-  margin-top: 1.5rem;
-  opacity: 0.9;
+  margin-top: 1.2rem;
 }
 
+/* Optional: smaller hero on mobile so it doesn’t feel empty */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;          /* less empty space on phones */
+    padding-top: 80px;         /* accounts for fixed navbar */
+  }
+  .hero .intro h2 {
+    font-size: 2.8rem;
+  }
+  .hero p {
+    font-size: 1.15rem;
+  }
+}
 .profile {
   width: 180px;
   height: 180px;
