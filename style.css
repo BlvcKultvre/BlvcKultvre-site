@@ -9,7 +9,7 @@ body {
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   color: #eee;                  /* Fixed: was "Pink" */
   line-height: 1.7;
-  background-image: url('Background.jpg');
+  background: linear-gradient(135deg, #2a1b3d 0%, #3d2a5e 100%);
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
