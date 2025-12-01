@@ -137,3 +137,57 @@ footer {
   gap: 3rem;
   flex-wrap: wrap;
 }
+
+/* ------------------------------
+   TESTIMONIAL VIDEO SLIDER
+------------------------------ */
+
+#testimonials {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  color: #d4a373;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Horizontal scroll container */
+.testimonial-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.testimonial-card {
+  flex: 0 0 280px;
+  background: rgba(40, 30, 80, 0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 1rem;
+  scroll-snap-align: start;
+  border-left: 4px solid #d4a373;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.testimonial-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.testimonial-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #ddd;
+  text-align: center;
+}
