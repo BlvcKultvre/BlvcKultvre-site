@@ -185,7 +185,7 @@ footer {
 .testimonial-card video {
   width: 100%;
   border-radius: 10px;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
